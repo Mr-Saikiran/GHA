@@ -1,5 +1,12 @@
 name: Deploy Lambda Function
-on: [push]
+on: 
+  push:
+    branches:
+      - lab-*
+  pull_request:
+    types:
+      - closed
+  workflow_dispatch:
 
 jobs:
 
